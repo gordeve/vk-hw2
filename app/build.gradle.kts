@@ -9,6 +9,10 @@ android {
     namespace = "com.gordeve.hw2"
     compileSdk = 34
 
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
     defaultConfig {
         applicationId = "com.gordeve.hw2"
         minSdk = 24
@@ -17,6 +21,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "API_URL", "\"https://cataas.com\"")
     }
 
     buildTypes {
@@ -34,9 +39,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
-    }
-    buildFeatures {
-        compose = true
     }
 }
 
